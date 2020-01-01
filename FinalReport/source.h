@@ -146,7 +146,6 @@ struct Room
 	void init() {
 		currentScore = 0;
 		currentArtifactScore = 0;
-		/*		放入神器卡	*/
 	}
 	/*
 	 * 重置寶石卡並放入牌堆
@@ -212,6 +211,7 @@ struct Room
 		if (artifactcards.size()) { cards.insert(cards.end(), artifactcards.begin(), artifactcards.begin() + 1); }
 		artifactcards.erase(artifactcards.begin());
 		shuffle(cards.begin(), cards.end());
+		currentScore = 0;
 	}
 	/*
 	 * 分配分數給回家的玩家
